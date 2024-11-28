@@ -19,3 +19,11 @@ companies:
     inferSchema: True
   save_args:
     header: True
+
+
+preprocessed_companies:
+  type: spark.SparkDataset
+  file_format: parquet
+  filepath: s3a://mydata/preprocessed_companies.parquet
+  save_args:
+    mode: overwrite

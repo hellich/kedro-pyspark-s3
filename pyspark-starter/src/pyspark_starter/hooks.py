@@ -23,10 +23,24 @@ class SparkHooks:
         _spark_session = spark_session_conf.getOrCreate()
         _spark_session.sparkContext.setLogLevel("WARN")
 
-        _spark_session.sparkContext._jsc.hadoopConfiguration().set("fs.s3a.access.key", "ROOTNAME")
-        _spark_session.sparkContext._jsc.hadoopConfiguration().set("fs.s3a.secret.key", "CHANGEME123")
-        _spark_session.sparkContext._jsc.hadoopConfiguration().set("fs.s3a.endpoint", "http://127.0.0.1:9000")
-        _spark_session.sparkContext._jsc.hadoopConfiguration().set("fs.s3a.path.style.access", "true")
-        _spark_session.sparkContext._jsc.hadoopConfiguration().set("fs.s3a.connection.ssl.enabled", "false")
-        _spark_session.sparkContext._jsc.hadoopConfiguration().set("fs.s3a.impl", "org.apache.hadoop.fs.s3a.S3AFileSystem")
-        _spark_session.sparkContext._jsc.hadoopConfiguration().set("fs.s3a.connection.ssl.enabled", "false")
+        _spark_session.sparkContext._jsc.hadoopConfiguration().set(
+            "fs.s3a.access.key", "ROOTNAME"
+        )
+        _spark_session.sparkContext._jsc.hadoopConfiguration().set(
+            "fs.s3a.secret.key", "CHANGEME123"
+        )
+        _spark_session.sparkContext._jsc.hadoopConfiguration().set(
+            "fs.s3a.endpoint", "http://127.0.0.1:9000"
+        )
+        _spark_session.sparkContext._jsc.hadoopConfiguration().set(
+            "fs.s3a.path.style.access", "true"
+        )
+        _spark_session.sparkContext._jsc.hadoopConfiguration().set(
+            "fs.s3a.connection.ssl.enabled", "false"
+        )
+        _spark_session.sparkContext._jsc.hadoopConfiguration().set(
+            "fs.s3a.impl", "org.apache.hadoop.fs.s3a.S3AFileSystem"
+        )
+        _spark_session.sparkContext._jsc.hadoopConfiguration().set(
+            "fs.s3a.connection.ssl.enabled", "false"
+        )

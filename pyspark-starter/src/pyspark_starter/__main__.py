@@ -1,6 +1,7 @@
 """pyspark-starter file for ensuring the package is executable
 as `pyspark-starter` and `python -m pyspark_starter`
 """
+
 import importlib
 from pathlib import Path
 

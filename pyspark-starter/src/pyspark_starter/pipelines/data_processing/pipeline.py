@@ -8,11 +8,13 @@ from .nodes import preprocess_companies
 
 
 def create_pipeline(**kwargs) -> Pipeline:
-    return pipeline([
-        node(
-            func=preprocess_companies,
-            inputs="companies",
-            outputs="preprocessed_companies",
-            name="preprocess_companies_node"
-        )
-    ])
+    return pipeline(
+        [
+            node(
+                func=preprocess_companies,
+                inputs="companies",
+                outputs="preprocessed_companies",
+                name="preprocess_companies_node",
+            )
+        ]
+    )
